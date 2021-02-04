@@ -17,13 +17,19 @@
 		<TabControl HorizontalAlignment="Left" Height="361" Margin="10,0,0,0" VerticalAlignment="Top" Width="944">
 			<TabItem Header="Работа с прикреплениями">
 				<Grid Background="#FFADE280">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="217*"/>
+						<ColumnDefinition Width="22*"/>
+						<ColumnDefinition Width="47*"/>
+						<ColumnDefinition Width="652*"/>
+					</Grid.ColumnDefinitions>
 					<Button Content="Поиск" HorizontalAlignment="Left" Margin="484,27,0,0" VerticalAlignment="Top" Width="135" Height="28" Grid.Column="3" Click="Button_Click_2"/>
-					<Label Content="Сформировать список Людей без прикрепления для сайта ТФОМС:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="339" Height="26"/>
-					<xctk:MaskedTextBox x:Name="Ot_Per" Mask="0000" HorizontalAlignment="Left" Margin="211,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Height="19"/>
-					<Label Width="177" VerticalAlignment="Top" Margin="10,23,0,0" Height="28" HorizontalAlignment="Left" Content="Отчетный перидо (год,месяц):"/>
-					<ComboBox x:Name="Choice_RstType" Width="158" VerticalAlignment="Top" Margin="115,55,0,0" Height="19" HorizontalAlignment="Left" SelectionChanged="Choice_RstType_SelectionChanged_1"/>
-					<Label Width="110" VerticalAlignment="Top" Margin="10,51,0,0" Height="28" HorizontalAlignment="Left" Content="Реестр:"/>
-					<Label Content="Поиск Людей без прикрепления:" HorizontalAlignment="Left" Height="35" Margin="10,78,0,0" VerticalAlignment="Top" Width="277"/>
+					<Label Content="Сформировать список Людей без прикрепления для сайта ТФОМС:" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Width="339" Grid.ColumnSpan="4"/>
+					<xctk:MaskedTextBox x:Name="Ot_Per" Mask="0000" HorizontalAlignment="Left" Margin="7.279,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Height="19" Grid.ColumnSpan="2" Grid.Column="1"/>
+					<Label Width="177" VerticalAlignment="Top" Margin="10,36,0,0" Height="28" HorizontalAlignment="Left" Content="Отчетный перидо (год,месяц):"/>
+					<ComboBox x:Name="Choice_RstType" Width="158" VerticalAlignment="Top" Margin="160,36,0,0" Height="19" HorizontalAlignment="Left" SelectionChanged="Choice_RstType_SelectionChanged_1" Grid.Column="3"/>
+					<Label Width="110" VerticalAlignment="Top" Margin="50,36,0,0" Height="28" HorizontalAlignment="Left" Content="Реестр:" Grid.Column="3"/>
+					<Label Content="Поиск Людей без прикрепления:" HorizontalAlignment="Left" Height="30" Margin="10,69,0,0" VerticalAlignment="Top" Width="277" Grid.ColumnSpan="4"/>
 					<DataGrid x:Name="DataGridLogView" HorizontalAlignment="Left" Height="224" Margin="10,99,0,0" VerticalAlignment="Top" Width="918" Grid.ColumnSpan="4"/>
 				</Grid>
 			</TabItem>
