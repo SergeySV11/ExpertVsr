@@ -1,0 +1,26 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Expert_VSR"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="Expert_VSR.Pisma"
+        mc:Ignorable="d"
+        Title="Выгрузка писем" Height="226" Width="318">
+	<Grid>
+		<Grid.Background>
+			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+				<GradientStop Color="#FFADE280" Offset="0"/>
+				<GradientStop Color="#FF587A39" Offset="1"/>
+			</LinearGradientBrush>
+		</Grid.Background>
+		<Label Content="Отчетный период (год,месяц):" HorizontalAlignment="Left" Height="26" Margin="10,15,0,0" VerticalAlignment="Top" Width="202" FontSize="14"/>
+		<xctk:MaskedTextBox x:Name="Ot_Per" Mask="0000" HorizontalAlignment="Left" Margin="217,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Height="26"/>
+		<Label Content="Реестр:" HorizontalAlignment="Left" Height="26" Margin="10,104,0,0" VerticalAlignment="Top" Width="57"/>
+		<ComboBox x:Name="Choice_RstType" HorizontalAlignment="Left" Height="26" Margin="133,104,0,0" VerticalAlignment="Top" Width="146" SelectionChanged="Choice_RstType_SelectionChanged"/>
+		<Label Content="ЛПУ-исполнитель:" HorizontalAlignment="Left" Height="27" Margin="10,59,0,0" VerticalAlignment="Top" Width="153" FontSize="16"/>
+		<xctk:MaskedTextBox x:Name="Lpu_F" Mask="000000" HorizontalAlignment="Left" Margin="217,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Height="27"/>
+		<Button Content="Сформировать письма" HorizontalAlignment="Left" Height="49" Margin="10,138,0,0" VerticalAlignment="Top" Width="269" Click="Button_Click"/>
+
+	</Grid>
+</Window>

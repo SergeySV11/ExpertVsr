@@ -1,0 +1,59 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Expert_VSR"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="Expert_VSR.Prikriplenie"
+        mc:Ignorable="d"
+        Title="Работа с прикреплениями" Height="402" Width="972.361">
+	<Grid>
+		<Grid.Background>
+			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+				<GradientStop Color="#FFADE280" Offset="0"/>
+				<GradientStop Color="#FF587A39" Offset="1"/>
+			</LinearGradientBrush>
+		</Grid.Background>
+		<TabControl HorizontalAlignment="Left" Height="361" Margin="10,0,0,0" VerticalAlignment="Top" Width="944">
+			<TabItem Header="Работа с прикреплениями">
+				<Grid Background="#FFADE280">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="217*"/>
+						<ColumnDefinition Width="22*"/>
+						<ColumnDefinition Width="47*"/>
+						<ColumnDefinition Width="652*"/>
+					</Grid.ColumnDefinitions>
+					<Button Content="Поиск" HorizontalAlignment="Left" Margin="467,36,0,0" VerticalAlignment="Top" Width="135" Height="28" Grid.Column="3" Click="Button_Click_2"/>
+					<Label Content="Сформировать список Людей без прикрепления для сайта ТФОМС:" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Width="339" Grid.ColumnSpan="4"/>
+					<xctk:MaskedTextBox x:Name="Ot_Per" Mask="0000" HorizontalAlignment="Left" Margin="7.279,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Height="19" Grid.ColumnSpan="2" Grid.Column="1"/>
+					<Label Width="177" VerticalAlignment="Top" Margin="10,36,0,0" Height="28" HorizontalAlignment="Left" Content="Отчетный перидо (год,месяц):"/>
+					<ComboBox x:Name="Choice_RstType" Width="158" VerticalAlignment="Top" Margin="160,36,0,0" Height="19" HorizontalAlignment="Left" SelectionChanged="Choice_RstType_SelectionChanged_1" Grid.Column="3"/>
+					<Label Width="110" VerticalAlignment="Top" Margin="50,36,0,0" Height="28" HorizontalAlignment="Left" Content="Реестр:" Grid.Column="3"/>
+					<Label Content="Поиск Людей без прикрепления:" HorizontalAlignment="Left" Height="30" Margin="10,69,0,0" VerticalAlignment="Top" Width="277" Grid.ColumnSpan="4"/>
+					<DataGrid x:Name="DataGridLogView" HorizontalAlignment="Left" Height="224" Margin="10,99,0,0" VerticalAlignment="Top" Width="918" Grid.ColumnSpan="4"/>
+				</Grid>
+			</TabItem>
+			<TabItem Header="Поиск прикрепления по ФИО">
+				<Grid Background="#FFADE280">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="46*"/>
+					</Grid.ColumnDefinitions>
+					<Label Content="ЕНП" HorizontalAlignment="Left" Margin="30,6,0,0" VerticalAlignment="Top" Width="105" FontSize="16" Height="36"/>
+					<Label Content="Фамилия" HorizontalAlignment="Left" Height="36" Margin="158,7,0,0" VerticalAlignment="Top" Width="114" FontSize="16"/>
+					<Label Content="Имя" HorizontalAlignment="Left" Height="36" Margin="286,7,0,0" VerticalAlignment="Top" Width="108" FontSize="14"/>
+					<Label Content="Отчество" HorizontalAlignment="Left" Height="36" Margin="409,7,0,0" VerticalAlignment="Top" Width="96" FontSize="16" RenderTransformOrigin="1.146,0.472"/>
+					<Label Content="Дата рождения" HorizontalAlignment="Left" Height="37" Margin="556,5,0,0" VerticalAlignment="Top" Width="114" FontSize="16"/>
+					<Button Content="Поиск" HorizontalAlignment="Left" Height="35" Margin="686,34,0,0" VerticalAlignment="Top" Width="103" FontSize="16" Background="#FFF3EFEF" FontStyle="Italic" BorderBrush="#FFF5E3E3" Click="Button_Click"/>
+					<Button Content="Очистить" HorizontalAlignment="Left" Height="34" Margin="794,34,0,0" VerticalAlignment="Top" Width="97" FontSize="16" Background="#FFF3EFEF" FontStyle="Italic" BorderBrush="#FFF5E3E3" Click="Button_Click_1"/>
+					<TextBox x:Name="chooseENP" HorizontalAlignment="Left" Height="22" Margin="30,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114"/>
+					<TextBox x:Name="chooseSurname" HorizontalAlignment="Left" Height="24" Margin="158,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114"/>
+					<TextBox x:Name="chooseName1" HorizontalAlignment="Left" Height="26" Margin="286,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="108"/>
+					<TextBox x:Name="chooseName2" HorizontalAlignment="Left" Height="26" Margin="409,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123"/>
+					<xctk:MaskedTextBox x:Name="chooseBirthday" Mask="00-00-0000" HorizontalAlignment="Left" Height="23" Margin="556,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114"/>
+					<DataGrid x:Name="DataGridLogView2" HorizontalAlignment="Left" Height="233" Margin="10,74,0,0" VerticalAlignment="Top" Width="893" Grid.ColumnSpan="2"/>
+				</Grid>
+			</TabItem>
+		</TabControl>
+
+	</Grid>
+</Window>
