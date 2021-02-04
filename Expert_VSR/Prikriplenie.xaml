@@ -23,7 +23,7 @@
 						<ColumnDefinition Width="47*"/>
 						<ColumnDefinition Width="652*"/>
 					</Grid.ColumnDefinitions>
-					<Button Content="Поиск" HorizontalAlignment="Left" Margin="467,36,0,0" VerticalAlignment="Top" Width="135" Height="28" Grid.Column="3" Click="Button_Click_2"/>
+					<Button Content="Поиск" HorizontalAlignment="Left" Margin="484,27,0,0" VerticalAlignment="Top" Width="135" Height="28" Grid.Column="3" Click="Button_Click_2"/>
 					<Label Content="Сформировать список Людей без прикрепления для сайта ТФОМС:" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Width="339" Grid.ColumnSpan="4"/>
 					<xctk:MaskedTextBox x:Name="Ot_Per" Mask="0000" HorizontalAlignment="Left" Margin="7.279,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="62" Height="19" Grid.ColumnSpan="2" Grid.Column="1"/>
 					<Label Width="177" VerticalAlignment="Top" Margin="10,36,0,0" Height="28" HorizontalAlignment="Left" Content="Отчетный перидо (год,месяц):"/>

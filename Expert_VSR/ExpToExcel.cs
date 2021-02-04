@@ -35,7 +35,7 @@ namespace Expert_VSR
                 }
                 if (tag != null)
                 {
-                    int adrD = tag.Start.Row;           //строка
+                    int adrD = tag.Start.Row;           //строка 
                     
                     foreach (Main _value in select)
                     {
